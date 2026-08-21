@@ -8,24 +8,35 @@ import java.util.Scanner;
         for(i=1;i<=n;i++)
         { factorial=factorial*i;}
         return factorial;}
-   static int obtenerPotencia(int n)
-    {   int potencia=n*n;
-        return potencia;}
+   static double obtenerRaiz(double n)
+    {   double raiz=Math.sqrt(n);
+        return raiz;}
     static int obtenerSuma(int n)
     {   int suma=0;
         for(int i=1;i<=n;i++)
         { suma=suma+i;}
         return suma;}
+    static int obtenerNumSecreto(int n)
+    {    if(n>1&&n<3)
+          {System.out.println("¡ADIVINASTE EL NUMERO SECRETO!");}
+           else
+            {System.out.println("¡FALLASTE!");}
+           return 0;
+    }
     public static void main(String[] args) {
 
         Scanner teclado=new Scanner(System.in);
         //DECLARACION DE VARIABLES
-        int opcion,factorial,suma=0,i=1,k,n,potencia;
+        int opcion,factorial,suma=0,i=1,k,n,potencia,secreto;
+        double raiz;
+        String raza="SNAUSER";
         //ENTRADA DE DATOS
         System.out.println("MENU DE OPCIONES:\n\n");
         System.out.println("1.-Factorial de un numero entero:\n");
         System.out.println("2.-Suma de n numeros naturales:\n");
-        System.out.println("3.-Potencia al cuadrado de un numero entero:\n");
+        System.out.println("3.-Raiz cuadrada de un numero positivo:\n");
+        System.out.println("4.-ADIVINE EL NUMERO SECRETO:\n");
+        System.out.println("5.-Raza de Perro:\n");
         System.out.println("ELIJA UNA OPCION:\n");
 
         opcion=teclado.nextInt();
@@ -34,22 +45,45 @@ import java.util.Scanner;
             case 1:
             System.out.println("Ingrese el valor de n:");
                  n=teclado.nextInt();
-                factorial=obtenerFactorial(n,i);
-                System.out.println("El factirial de n es n!="+factorial);
+                if(n==0)
+                { System.out.println("El fatorial es "+n+"!=1");}
+                  else if(n>0)
+                   {
+                    factorial=obtenerFactorial(n,i);
+                    System.out.println("El factirial es "+n+"!="+factorial);}
+                   else
+                    { System.out.println("¡EL NUMERO DEBE DE SER POSITIVO!");}
                 break;
             case 2:
              System.out.println("Ingrese el valor de n:");
                 n=teclado.nextInt();
+               if(n>=0)
+                {
                 suma=obtenerSuma(n);
-                System.out.println("La suma de la serie de n numeros naturales es:"+suma);
+                System.out.println("La suma de la serie de n numeros naturales es:"+suma);}
+                 else
+                  {System.out.println("¡EL NUMERO DEBE DE SER POSITIVO!");}
                 break;
             case 3:
                 System.out.println("Ingrese el valor de n:");
                 n=teclado.nextInt();
-                potencia=obtenerPotencia(n);
-                System.out.println("La potencia al cuadrado de n es:"+potencia);
-                default :
-             System.out.println("¡OPCION NO VALIDA!");
+                if(n>=0)
+                {raiz=obtenerRaiz(n);
+                System.out.println("La raiz cuadrada de n es:"+raiz);}
+                 else
+                  {System.out.println("¡EL NUMERO DEBE DE SER POSITIVO!");}
+                break;
+            case 4:
+                System.out.println("Ingrese el valor del numero secreto (1, 2 o 3):");
+                n=teclado.nextInt();
+               secreto=obtenerNumSecreto(n);
+                break;
+            case 5:
+                System.out.println("RAZA DE UN PERRO FAVORITA:\n");
+                System.out.println("La raza del perro es: " + raza);
+                break;
+            default:
+                System.out.println("¡OPCION NO VALIDA!");
         }
 
 

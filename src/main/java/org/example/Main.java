@@ -9,7 +9,7 @@ import java.util.Scanner;
         { factorial=factorial*i;}
         return factorial;}
    static double obtenerRaiz(double n)
-    {   double raiz=Math.sqrt(n);
+    {   double raiz=Math.pow(n,0.5);
         return raiz;}
     static int obtenerSuma(int n)
     {   int suma=0;

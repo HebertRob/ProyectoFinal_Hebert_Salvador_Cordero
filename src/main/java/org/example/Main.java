@@ -17,10 +17,11 @@ import java.util.Scanner;
         { suma=suma+i;}
         return suma;}
     static int obtenerNumSecreto(int n)
-    {    if(n>1&&n<3)
-          {System.out.println("¡ADIVINASTE EL NUMERO SECRETO!");}
+    {   boolean adivino=true,noadivino=false;
+        if(n>1&&n<3)
+          {System.out.println("¡ADIVINASTE EL NUMERO SECRETO! "+adivino);}
            else
-            {System.out.println("¡FALLASTE!");}
+            {System.out.println("¡FALLASTE! "+noadivino);}
            return 0;
     }
     public static void main(String[] args) {

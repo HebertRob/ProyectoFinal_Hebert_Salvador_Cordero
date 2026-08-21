@@ -30,7 +30,7 @@ import java.util.Scanner;
         int opcion,factorial,suma=0,i=1,k,n,potencia,secreto;
         double raiz;
         String raza="SNAUSER";
-        //ENTRADA DE DATOS
+
         System.out.println("MENU DE OPCIONES:\n\n");
         System.out.println("1.-Factorial de un numero entero:\n");
         System.out.println("2.-Suma de n numeros naturales:\n");
@@ -38,8 +38,11 @@ import java.util.Scanner;
         System.out.println("4.-ADIVINE EL NUMERO SECRETO:\n");
         System.out.println("5.-Raza de Perro:\n");
         System.out.println("ELIJA UNA OPCION:\n");
+        //ENTRADA DE DATOS
 
         opcion=teclado.nextInt();
+       //PROCESO DE CALCULOS
+
         switch(opcion)
         {
             case 1:

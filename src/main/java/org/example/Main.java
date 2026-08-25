@@ -64,7 +64,7 @@ import java.util.Scanner;
                if(n>=0)
                 {
                 suma=obtenerSuma(n);
-                System.out.println("La suma de la serie de n numeros naturales es:"+suma);}
+                System.out.println("La suma de la serie de numeros naturales de 1 al "+n+" es: "+suma);}
                  else
                   {System.out.println("¡EL NUMERO DEBE DE SER POSITIVO!");}
                 break;

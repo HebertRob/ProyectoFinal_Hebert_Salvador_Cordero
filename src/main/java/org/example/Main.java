@@ -83,7 +83,7 @@ import java.util.Scanner;
                secreto=obtenerNumSecreto(n);
                 break;
             case 5:
-                System.out.println("RAZA FAVORITA DE PERRO :\n");
+                System.out.println("RAZA FAVORITA DE PERRO:\n");
                 System.out.println("La raza del perro es: " + raza);
                 break;
             default:

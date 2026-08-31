@@ -92,20 +92,16 @@ import java.util.Scanner;
                 n=teclado.nextInt();
                 k=0;
                 for(i=1;i<=n;i++)
-                { if (n%i==0) {
-                    k++;
-                }
-                }
-                if (k==2) {
-                    System.out.println("El numero " + n + " ES PRIMO.");
-                } else {
-                    System.out.println("El numero " + n + " NO ES PRIMO.");
-                }
-                break;
+                { if (n%i==0) 
+                   { k++; }
+                  }
+                if (k==2) 
+                 {  System.out.println("El numero " + n + " ES PRIMO.")  } 
+                else 
+                 {  System.out.println("El numero " + n + " NO ES PRIMO."); }
+                break 
             default:
                 System.out.println("¡OPCION NO VALIDA!");
         }
-
-
     }
 }

@@ -3,9 +3,9 @@ import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
  public class Main {
-    static int obtenerFactorial(int n,int i)
+    static int obtenerFactorial(int n)
     {   int factorial=1;
-        for(i=1;i<=n;i++)
+        for(int i=1;i<=n;i++)
         { factorial=factorial*i;}
         return factorial;}
    static double obtenerRaiz(double n)
@@ -54,7 +54,7 @@ import java.util.Scanner;
                 { System.out.println("El fatorial es "+n+"!=1");}
                   else if(n>0)
                    {
-                    factorial=obtenerFactorial(n,i);
+                    factorial=obtenerFactorial(n);
                     System.out.println("El factirial es "+n+"!="+factorial);}
                    else
                     { System.out.println("¡EL NUMERO DEBE DE SER POSITIVO!");}

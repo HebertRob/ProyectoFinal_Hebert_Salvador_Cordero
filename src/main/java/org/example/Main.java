@@ -38,6 +38,7 @@ import java.util.Scanner;
         System.out.println("3.-Raiz cuadrada de un numero positivo:\n");
         System.out.println("4.-ADIVINE EL NUMERO SECRETO:\n");
         System.out.println("5.-Raza de Perro:\n");
+        System.out.println("6.-Ver si un numero es Primo:\n");
         System.out.println("ELIJA UNA OPCION:\n");
         //ENTRADA DE DATOS
 
@@ -83,8 +84,21 @@ import java.util.Scanner;
                secreto=obtenerNumSecreto(n);
                 break;
             case 5:
-                System.out.println("RAZA FAVORITA DE PERRO :\n");
+                System.out.println("RAZA FAVORITA DE PERRO:\n");
                 System.out.println("La raza del perro es: " + raza);
+                break;
+            case 6:
+                System.out.println("Ingrese un numero para verificar si es primo:");
+                n=teclado.nextInt();
+                k=0;
+                for(i=1;i<=n;i++)
+                 { if (n%i==0)
+                   { k++;}
+                 }
+                if (k==2)
+                { System.out.println("El numero " + n + " ES PRIMO."); }
+                else
+                { System.out.println("El numero " + n + " NO ES PRIMO."); }
                 break;
             default:
                 System.out.println("¡OPCION NO VALIDA!");
